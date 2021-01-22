@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="<?= base_url()?>/assets3/css/components.css">
 </head>
 
-<body style="background-color: #0000FF;"> 
+<body style="background-color: #9932CC;"> 
   <div id="app">
     <section class="section">
       <div class="container mt-5">
@@ -37,30 +37,25 @@
                 <form method="POST" action="<?= base_url() ?>auth/cek_login" class="needs-validation">
                   <div class="form-group">
                     <label for="email">Username</label>
-                    <input id="email" type="text" class="form-control" name="username" required="">
+                    <input id="email" type="text" class="form-control" name="username" required="" placeholder="Masukan username">
                    
                   </div>
 
-                  <div class="form-group">
-                    <div class="d-block">
-                      <label for="password" class="control-label">Password</label>
-                      <div class="float-right">
-                       
+                  <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <a href="#" id="pass"><i class="fas fa-eye"></i></a>
+                        <a href="#" id="pass1" style="display: none;"><i class="fas fa-eye-slash"></i></a>
                       </div>
                     </div>
-                    <input id="password" type="password" class="form-control" name="pass" required="">
+                    <input type="password" id="show" class="form-control"  placeholder="Masukan password" name="pass">
                     <?php echo $this->session->flashdata('pesan1'); ?>
                   </div>
-<!-- 
-                  <div class="form-group">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me">
-                      <label class="custom-control-label" for="remember-me">Remember Me</label>
-                    </div>
-                  </div> -->
+
+                
 
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4" style="background-color: #9932CC">
                       Login
                     </button>
                   </div>
@@ -100,5 +95,45 @@
 
   <!-- Page Specific JS File -->
    <?php echo "<script>".$this->session->flashdata('message')."</script>"?>
+
+
+   <script>
+
+      $(document).ready(function(){
+
+        $("#pass").click(function(){
+
+          $("#show").attr("type","text");
+          $(this).hide();
+          $("#pass1").show();
+
+      
+         
+        })
+
+
+      })
+
+
+       $(document).ready(function(){
+
+        $("#pass1").click(function(){
+
+          $("#show").attr("type","password");
+          $(this).hide();
+          $("#pass").show();
+
+      
+         
+        })
+
+        
+      })
+
+    </script>
+
+
+
+
 </body>
 </html>
