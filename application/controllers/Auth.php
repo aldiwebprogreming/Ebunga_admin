@@ -49,7 +49,7 @@
 							redirect('Dashbord/index');
 						} else{
 							
-						$this->session->set_flashdata('pesan1', '<label style="color: red">Password anda salah</label>');
+						$this->session->set_flashdata('pesan1','Password anda salah');
 						redirect('');
 						}
 					} else {

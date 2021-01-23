@@ -68,7 +68,7 @@
                                             
                                                 <td>
                                                   <span class="d-inline-block" data-toggle="tooltip" data-title="Hapus">
-                                                    <a href="<?= base_url() ?>blog/hapus_blog?id=<?= $data['id'] ?>" class="btn btn-danger" onclick="return confirm('Yakin Hapus?')"><i class="fas fa-trash"></i></a>
+                                                    <a href="<?= base_url() ?>blog/hapus_blog?id=<?= $data['id'] ?>" class="btn btn-danger" onclick="return  "><i class="fas fa-trash"></i></a>
                                                   </span>
 
                                                    <span class="d-inline-block" data-toggle="tooltip" data-title="Edit">
@@ -115,4 +115,31 @@
     $(document).ready(function(){
       $(".preloader").fadeOut('slow');
     })
-    </script>         
+    </script>        
+
+
+
+
+
+<script>
+    archiveFunction() {
+        swal({
+  title: "Are you sure?",
+  text: "But you will still be able to retrieve this file.",
+  type: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#DD6B55",
+  confirmButtonText: "Yes, archive it!",
+  cancelButtonText: "No, cancel please!",
+  closeOnConfirm: false,
+  closeOnCancel: false
+},
+function(isConfirm){
+  if (isConfirm) {
+    swal("Deleted!", "Your imaginary file has been archived.", "success");
+  } else {
+    swal("Cancelled", "Your imaginary file is safe :)", "error");
+  }
+});
+    }
+</script> 

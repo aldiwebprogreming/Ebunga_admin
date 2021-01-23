@@ -49,8 +49,12 @@
                       </div>
                     </div>
                     <input type="password" id="show" class="form-control"  placeholder="Masukan password" name="pass">
-                    <?php echo $this->session->flashdata('pesan1'); ?>
+                  
                   </div>
+                    <small> <?php echo $this->session->flashdata('pesan1'); ?></small>
+
+                 
+            
 
                 
 
