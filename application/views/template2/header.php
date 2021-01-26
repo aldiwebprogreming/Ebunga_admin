@@ -188,14 +188,7 @@
 
                <!-- Data Produk -->
 
-              <li class="menu-header">Order</li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-fan"></i> <span>Data Order</span></a>
-                <ul class="dropdown-menu">
-                  <li> <a class="nav-link" href="<?= base_url() ?>pembayaran/data_pembayaran">Pembayaran</a></li>
-                  <li> <a class="nav-link" href="<?= base_url() ?>temp_order/data_temp_order/">Temp Order</a></li>
-                </ul>
-              </li>
+             
 
 
 
