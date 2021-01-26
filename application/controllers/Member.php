@@ -216,6 +216,21 @@
 
 	}
 
+	function det_member(){
+
+		$data['title'] = "Detail Member";
+		$data['sub_title'] = "Detail Member";
+		$id = $this->input->get('id');
+
+		$data['det'] = $this->m_data->get_det('tbl_member', $id);
+
+		$this->load->view('template2/header', $data);
+		$this->load->view('detail/det_member', $data);
+		$this->load->view('template2/footer');
+
+		
+	}
+
 
  	
 }

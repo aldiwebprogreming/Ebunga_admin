@@ -1,5 +1,5 @@
 <?php foreach ($member as $data) { ?>
-  <a href="#" class="dropdown-item dropdown-item-unread">
+  <a href="<?= base_url() ?>member/det_member?id=<?= $data['id'] ?>" class="dropdown-item dropdown-item-unread">
                   <div class="dropdown-item-avatar">
                     <img alt="image" src="<?= base_url('') ?>logo/usericon.png" class="rounded-circle">
                     <div class=""></div>
