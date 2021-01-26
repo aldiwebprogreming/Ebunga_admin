@@ -197,6 +197,21 @@ class Temp_order extends CI_Controller
 
 	}
 
+
+	function det_order(){
+
+		$id = $this->input->get('id');
+		$data['title'] = "Detail Order";
+		$data['sub_title'] = "Detail Order";
+		$data['det'] = $this->m_data->get_det('tbl_temp_order', $id);
+
+		$this->load->view('template2/header', $data);
+		$this->load->view('detail/det_order1', $data);
+		$this->load->view('template2/footer');
+
+
+	}
+
 }
 
  ?>

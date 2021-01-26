@@ -1,5 +1,5 @@
 <?php foreach ($order as $data) { ?>
-  <a href="#" class="dropdown-item dropdown-item-unread">
+  	<a href="<?= base_url() ?>temp_order/det_order?id=<?= $data['id'] ?>" class="dropdown-item dropdown-item-unread">
                   <div class="dropdown-item-avatar">
                     <img alt="image" src="<?= base_url('') ?>logo/shop.png" class="rounded-circle">
                     <div class=""></div>
@@ -8,7 +8,7 @@
                    
                       <b><?= $data['customer'] ?></b>
                       <p>Rp.<?=$data['total'] ?></p>
-                      
+
                       <div class="time">
                       	
                       	 <?php 
