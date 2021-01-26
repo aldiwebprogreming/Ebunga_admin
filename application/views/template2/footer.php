@@ -36,5 +36,4 @@
 
 <!-- Page Specific JS File -->
 <script src="<?= base_url() ?>assets3/js/page/bootstrap-modal.js"></script>
-
 <?php echo "<script>".$this->session->flashdata('message')."</script>"?>

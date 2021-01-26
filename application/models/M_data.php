@@ -43,7 +43,7 @@
 		function get_member(){
 
 				$this->db->order_by('id', 'DESC');
-				$query = $this->db->get('tbl_member','2');
+				$query = $this->db->get('tbl_member','3');
 
 				return $query->result_array();
 
@@ -52,7 +52,7 @@
 		function get_order(){
 
 				$this->db->order_by('id', 'DESC');
-				$query = $this->db->get('tbl_temp_order','2');
+				$query = $this->db->get('tbl_temp_order','3');
 
 				return $query->result_array();
 

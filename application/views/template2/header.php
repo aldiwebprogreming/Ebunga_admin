@@ -69,11 +69,13 @@
               </div>
 
               <div id="user_baru" class="dropdown-list-content dropdown-list-icons">
-               
+                <div id="member">
+                  
+                </div>
               </div>
             
               <div class="dropdown-footer text-center">
-                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                <a href="<?= base_url() ?>member/data_member">View All <i class="fas fa-chevron-right"></i></a>
               </div>
             </div>
           </li>
@@ -89,11 +91,14 @@
               </div>
 
               <div id="order_baru" class="dropdown-list-content dropdown-list-icons">
+                <div id="order-shop">
+                    
+                </div>
                
               </div>
             
               <div class="dropdown-footer text-center">
-                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+                <a href="<?= base_url() ?>temp_order/data_temp_order">View All <i class="fas fa-chevron-right"></i></a>
               </div>
             </div>
           </li>
@@ -192,6 +197,17 @@
                 </ul>
               </li>
 
+
+
+              <li class="menu-header">Order</li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-fan"></i> <span>Data Order</span></a>
+                <ul class="dropdown-menu">
+                  <li> <a class="nav-link" href="<?= base_url() ?>pembayaran/data_pembayaran">Pembayaran</a></li>
+                  <li> <a class="nav-link" href="<?= base_url() ?>temp_order/data_temp_order/">Temp Order</a></li>
+                </ul>
+              </li>
+
               <!-- Data Produk -->
 
        <!--         <li class="menu-header">Produk</li>
@@ -243,7 +259,7 @@
               <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-users-cog"></i> <span>Setting</span></a>
                 <ul class="dropdown-menu">
-                  <li>  <a class="nav-link" href="<?= base_url() ?>Aplikasi/data_aplikasi/">Aplikasi</a></li>
+                  <li>  <a class="nav-link" href="">Aplikasi</a></li>
                   <li><a class="nav-link" href="<?= base_url() ?>user/data_user/">Operator</a></li>
 
                 </ul>
@@ -269,29 +285,44 @@
     
 <script>
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-  setInterval(function(){
+//   setInterval(function(){
 
-    $("#user").load("<?= site_url() ?>get/row.php");
+//     $("#user").load("<?= site_url() ?>get/row.php");
 
-  }, 100  );
-
-
-});
-
-$(document).ready(function(){
-
-  setInterval(function(){
-
-    $("#shop").load("<?= site_url() ?>get/row1.php");
-
-  }, 100);
+//   }, 100  );
 
 
-});
+// });
+
+// $(document).ready(function(){
+
+//   setInterval(function(){
+
+//     $("#shop").load("<?= site_url() ?>get/row1.php");
+
+//   }, 100);
 
 
+// });
+
+//  function member(){
+
+//     $.get("<?= base_url('') ?>get_data/data_member",function(data,success){
+
+//       $("#member").html(data);
+
+//     })
+//   }
+
+
+//   function order(){
+//     $.get("<?= base_url('') ?>get_data/order",function(data,success){
+      
+//       $("#order-shop").html(data);  
+//     })
+//   }
 
 
 // $(document).ready(function(){
@@ -299,9 +330,8 @@ $(document).ready(function(){
 
 //   setInterval(function(){
             
-//            ambilDataOrder();
-//             ambilDataUser();
-
+//          member();
+//          order();
 
 
 
@@ -313,31 +343,63 @@ $(document).ready(function(){
 // })
 
 
-//   function ambilDataOrder(){
 
-//     $.get("<?= base_url() ?>get_data/index", function(data, success){
+$(document).ready(function(){
 
-//         $("#order_baru").html(data);
+  
 
-//     });
+  setInterval(function(){ 
 
-    
-//   }
+     $.get("<?= base_url() ?>get_data/data_member", function(data,success){
 
-
-//   function ambilDataUser(){
-//     $.get("<?= base_url() ?>get_data/ambil_datauser", function(data, success){
-//       $("#user_baru").html(data);
-//     });
-//   }
+        $("#member").html(data);
 
 
+    });  
 
-//   function sound(){
+   }, 3000);
 
-//         var bel = new Audio('https://www.meramukoding.com/wp-content/uploads/2020/05/doorbell.mp3');
-//         bel.play();
-//   }
+});
+
+
+
+$(document).ready(function(){
+
+  setInterval(function(){ 
+
+     $.get("<?= base_url() ?>get_data/order", function(data,success){
+
+        $("#order-shop").html(data);
+
+    });  
+
+   }, 3000);
+
+});
+
+
+$(document).ready(function(){
+
+  setInterval(function(){ 
+
+     $.get("<?= base_url() ?>get_data/jumlah_order", function(data,success){
+
+        $("#shop").html(data);
+
+    });  
+
+   }, 3000);
+
+});
+
+
+
+
+
+
+
+ 
+
 
 
 </script>  

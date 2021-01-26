@@ -181,6 +181,14 @@ class Temp_order extends CI_Controller
 
  	}
 
+ 	function hapus_temp_order(){
+		$id = $this->input->get('id');
+		$this->db->delete('tbl_temp_order', array('id' => $id));
+		redirect('temp_order/data_temp_order');
+ 	}
+
+
+
  	function get_tempt_order(){
 
 		$data['order'] = $this->m_data->get_order();

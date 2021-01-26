@@ -83,15 +83,15 @@
                     <h4>Order Terbaru</h4>
                   </div>
                        <div class="card-body">
-                                    <div id="order">
+                        <div id="order">
                                    
-                                    </div>
-                                    <center>
-                                      <a href="<?= base_url() ?>temp_order/data_temp_order" class="badge badge-primary">View all <li class="fas fa-chevron-right"></li></a>
-                                    </center>
-                                </div>
-                            </div>
                         </div>
+                        <center>
+                          <a href="<?= base_url() ?>temp_order/data_temp_order" class="badge badge-primary">View all <li class="fas fa-chevron-right"></li></a>
+                        </center>
+                    </div>
+                </div>
+            </div>
 
 
                 <div class="col-12 col-md-6 col-lg-6">
@@ -103,16 +103,16 @@
                        <div class="card-body">
 
 
-                              <div id="pelanggan">
+                          <div id="pelanggan">
                                
                             
-                                    </div>
-                                    <center>
-                                      <a href="<?= base_url() ?>member/data_member" class="badge badge-primary">View all <li class="fas fa-chevron-right"></li></a>
-                                    </center>
-                                </div>
-                            </div>
-                        </div>
+                          </div>
+                          <center>
+                            <a href="<?= base_url() ?>member/data_member" class="badge badge-primary">View all <li class="fas fa-chevron-right"></li></a>
+                          </center>
+                      </div>
+                  </div>
+              </div>
 
 
 
