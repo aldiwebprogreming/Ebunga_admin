@@ -201,6 +201,12 @@
                 </ul>
               </li>
 
+            <li class="menu-header">Produk Terlairs</li>
+                <li><a class="nav-link active" href="<?= base_url() ?>Best_product/data_best_product"> <i class="fas fa-donate"></i> <span>Produk Terlaris</span></a></li>
+            
+              </li>
+
+
               <!-- Data Produk -->
 
        <!--         <li class="menu-header">Produk</li>
