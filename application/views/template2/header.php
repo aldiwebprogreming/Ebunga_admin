@@ -201,8 +201,8 @@
                 </ul>
               </li>
 
-            <li class="menu-header">Produk Terlairs</li>
-                <li><a class="nav-link active" href="<?= base_url() ?>Best_product/data_best_product"> <i class="fas fa-donate"></i> <span>Produk Terlaris</span></a></li>
+            <li class="menu-header">Produk Terlaris</li>
+                <li><a class="nav-link active" href="<?= base_url() ?>Best_product/data_best_product"> <i class="fas fa-shopping-bag"></i> <span>Produk Terlaris</span></a></li>
             
               </li>
 
@@ -259,7 +259,9 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-users-cog"></i> <span>Setting</span></a>
                 <ul class="dropdown-menu">
                   <li>  <a class="nav-link" href="">Aplikasi</a></li>
+                   <li>  <a class="nav-link" href="<?= base_url() ?>markup/data_markup/">Mark Up</a></li>
                   <li><a class="nav-link" href="<?= base_url() ?>user/data_user/">Operator</a></li>
+                   <li><a class="nav-link" href="#"></a></li>
 
                 </ul>
               </li>

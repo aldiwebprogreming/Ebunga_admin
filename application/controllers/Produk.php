@@ -227,6 +227,15 @@
 	}
 
 
+	function diskon(){
+			$diskon = 20;
+		 $nilai=($diskon/100)*50000;
+
+			$hasil = 50000 - $nilai;
+			echo $hasil;
+	}
+
+
 
 	}
 

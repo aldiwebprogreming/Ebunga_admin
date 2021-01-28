@@ -58,6 +58,10 @@
 
 		}
 
+		function detail_terlaris($kd_product){
+
+			return $this->db->get_where('tbl_temp_order', array('kd_product' => $kd_product))->result_array();
+		}
 
 
 	}

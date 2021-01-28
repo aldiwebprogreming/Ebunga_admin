@@ -37,7 +37,8 @@
                                                 <th>No</th>
                                                 <th>Kode Produk</th>
                                                 <th>Nama Produk</th>
-                                                <th>Harga</th>
+                                                <th>Harga Awal</th>
+                                                <th>Mark Up</th>
                                                 <th>Stok</th>
                                                 <th>Opsi</th>
                                             </tr>
@@ -47,7 +48,8 @@
                                                  <th>No</th>
                                                 <th>Kode Produk</th>
                                                 <th>Nama Produk</th>
-                                                <th>Harga</th>
+                                                <th>Harga Awal</th>
+                                                <th>Mark Up</th>
                                                 <th>Stok</th>
                                                 <th>Opsi</th>
                                             </tr>
@@ -63,6 +65,7 @@
                                                 <td><?= $data['kd_produk'] ?></td>
                                                 <td><?= $data['nama_produk'] ?></td>
                                                 <td><?= $data['harga'] ?></td>
+                                                <td></td>
                                                 <td><?= $data['stok'] ?></td>
                                                 <td>
                                                    <span class="d-inline-block" data-toggle="tooltip" data-title="Hapus">
