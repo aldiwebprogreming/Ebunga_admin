@@ -17,6 +17,7 @@
 				$data['sub_title'] = "Data Mark Up Ebunga";
 
 				$data['markup'] = $this->m_data->get_data('tbl_setting_markup');
+				$data['cek'] = $this->db->get('tbl_setting_markup')->num_rows();
 				$this->load->view('template2/header', $data);
 				$this->load->view('admin/data_markup', $data);
 				$this->load->view('template2/footer');
@@ -54,7 +55,7 @@
 
 				$id = $this->input->get('id');
 
-				$delete = $this->db->delete('tbl_markup', array('id' => $id));
+				$delete = $this->db->delete('tbl_setting_markup', array('id' => $id));
 				$this->session->set_flashdata('message','swal("Suskses!", "Data berhasil dihapus")');
 				redirect('markup/data_markup');
 			}
@@ -64,7 +65,7 @@
 				$data['title'] = "Edit markup";
 				$data['sub_title'] = "Edit Mark Up Ebunnga";
 
-				$data['markup'] = $this->m_data->get_det('tbl_markup', $id);
+				$data['markup'] = $this->m_data->get_det('tbl_setting_markup', $id);
 
 				$this->load->view('template2/header', $data);
 				$this->load->view('admin/edit_markup', $data);
@@ -79,11 +80,13 @@
 					];
 
 
-					$update = $this->m_data->proses_edit($id,'tbl_markup',$data);
+					$update = $this->m_data->proses_edit($id,'tbl_setting_markup',$data);
 					$this->session->set_flashdata('message','swal("Suskses!", "Data berhasil diedit")');
 					redirect('markup/data_markup');
 				}
 
 			}
+
+
 		}
  ?>

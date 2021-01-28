@@ -25,11 +25,15 @@
     
                                 
                                 <div class="card-body">
-                                 <a href="<?= base_url() ?>markup/tambah_markup" class ="btn btn-primary mb-4"> Tambah Mark Up</a>
+                                <?php 
 
-                                <!--    <a href="<?= base_url() ?>katagori/cetak_data" id="" class ="btn btn-danger mb-4" target="_blank"><i class="fas fa-print"></i> Cetak PDF</a> 
+                                  if ($cek >= 1) { ?>
+                                    <a href="#" onclick=" swal('Maaf!', 'Mark up tidak dapat ditambah!', 'info')" class ="btn btn-primary mb-4" disabled > Tambah Mark Up</a>
+                                  <?php } else { ?>
+                                    <a href="<?= base_url() ?>markup/tambah_markup" class ="btn btn-primary mb-4" disabled > Tambah Mark Up</a>
+                                  <?php } ?>
+                               
 
-                                     <a href="<?= base_url() ?>katagori/cetak_excel1" id="" class ="btn btn-success mb-4" ><i class="fas fa-file-excel"></i> Cetak Excel</a>  -->
 
                                 <div class="table-responsive">
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -95,9 +99,13 @@
     </div>
   </div>
 
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
     $(document).ready(function(){
       $(".preloader").fadeOut('slow');
+
+       
     })
     </script>
+
+   
