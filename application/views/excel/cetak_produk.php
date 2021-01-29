@@ -1,7 +1,7 @@
 <?php
 // Skrip berikut ini adalah skrip yang bertugas untuk meng-export data tadi ke excell
-header("Content-type: application/vnd-ms-excel");
-header("Content-Disposition: attachment; filename=data produk.xlsx");
+// header("Content-type: application/vnd-ms-excel");
+// header("Content-Disposition: attachment; filename=data produk.xlsx");
 ?>
 
 <h3>Data Produk</h3>
@@ -18,6 +18,7 @@ header("Content-Disposition: attachment; filename=data produk.xlsx");
          <th>Id Branch</th>
          <th>Id Seller</th>
          <th>Harga</th>
+         <th>Harga Markup</th>
          <th>Stok</th>
          <th>Active</th>
          <th>Foto Utama</th>
@@ -37,6 +38,14 @@ header("Content-Disposition: attachment; filename=data produk.xlsx");
 		<td><?= $data['id_branch'] ?></td>
 		<td><?= $data['id_seller'] ?></td>
 		<td><?= $data['harga'] ?></td>
+		<td>
+			<?php 
+            foreach ($markup as $data1) {
+            }
+                $nilai = ($data1['mark_up']/100)*$data['harga'];
+                echo $data['harga']+$nilai;
+             ?>
+		</td>
 		<td><?= $data['stok'] ?></td>
 		<td><?= $data['active'] ?></td>
 		<td><?= $data['foto_utama'] ?></td>

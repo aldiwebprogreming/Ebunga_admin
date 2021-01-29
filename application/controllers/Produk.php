@@ -26,7 +26,7 @@
 
 			$data['produk'] = $this->m_data->get_data($tabel='tbl_produk');
 			$data['markup'] = $this->m_data->get_data('tbl_setting_markup');
-			
+
 
 			$this->load->view('template2/header', $data);
 			$this->load->view('admin/data_produk', $data);
@@ -196,7 +196,9 @@
 
 		$data['judul'] = "PRODUK EBUNGA";
 		$data['footer'] = 'Laporan data produk dicetak pada tanggal :';
+
 		$data['produk'] = $this->m_data->get_data("tbl_produk");
+		$data['markup'] = $this->m_data->get_data('tbl_setting_markup');
  		$this->load->view('cetak/cetak_produk',$data);
 
  		$paper_size ="A4";
@@ -225,17 +227,12 @@
 	function cetak_excel(){
 
 		$data['produk'] = $this->m_data->get_data('tbl_produk');
+		$data['markup'] = $this->m_data->get_data('tbl_setting_markup');
 		$this->load->view('excel/cetak_produk', $data);
 	}
 
 
-	function diskon(){
-			$diskon = 20;
-		 $nilai=($diskon/100)*50000;
-
-			$hasil = 50000 - $nilai;
-			echo $hasil;
-	}
+	
 
 
 

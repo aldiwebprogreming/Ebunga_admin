@@ -56,6 +56,7 @@ table tr:nth-child(even) {
 			<th width="">Id Branch</th>
 			<th width="">Id Seller</th>
 			<th width="">Harga</th>
+			<th>Harga Markup</th>
 			<th width="">Stok</th>
 			<th width="">Active</th>
 		</tr>	
@@ -78,6 +79,16 @@ table tr:nth-child(even) {
 			<td><?= $data['id_branch'] ?></td>
 			<td><?= $data['id_seller'] ?></td>
 			<td><?= $data['harga'] ?></td>
+			<td>
+				<?php 
+                foreach ($markup as $data1) {
+                }
+
+                    $nilai = ($data1['mark_up']/100)*$data['harga'];
+                    echo $data['harga']+$nilai;
+
+                 ?>
+			</td>
 			<td><?= $data['stok'] ?></td>
 			<td><?= $data['active'] ?></td>
 		</tr>
