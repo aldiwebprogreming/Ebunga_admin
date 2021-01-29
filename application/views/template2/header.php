@@ -286,62 +286,6 @@
     
 <script>
 
-// $(document).ready(function(){
-
-//   setInterval(function(){
-
-//     $("#user").load("<?= site_url() ?>get/row.php");
-
-//   }, 100  );
-
-
-// });
-
-// $(document).ready(function(){
-
-//   setInterval(function(){
-
-//     $("#shop").load("<?= site_url() ?>get/row1.php");
-
-//   }, 100);
-
-
-// });
-
-//  function member(){
-
-//     $.get("<?= base_url('') ?>get_data/data_member",function(data,success){
-
-//       $("#member").html(data);
-
-//     })
-//   }
-
-
-//   function order(){
-//     $.get("<?= base_url('') ?>get_data/order",function(data,success){
-      
-//       $("#order-shop").html(data);  
-//     })
-//   }
-
-
-// $(document).ready(function(){
-
-
-//   setInterval(function(){
-            
-//          member();
-//          order();
-
-
-
-//     }, 100  );
-
- 
-
-
-// })
 
 
 

@@ -130,56 +130,14 @@ class Temp_order extends CI_Controller
 
  	function cetak_excel(){
 
- 		$data['order'] = $this->m_data->get_data($tabel="tbl_temp_order");
+ 		$data['order'] = $this->m_data->get_data('tbl_temp_order');
+		$this->load->view('excel/cetak_temp_order', $data);
 
- 		require(APPPATH. 'PHPExcel/Classes/PHPExcel.php');
- 		require(APPPATH. 'PHPExcel/Classes/PHPExcel/Writer/Excel2007.php');
-
- 		$object = new PHPExcel();
- 		$object->getProperties()->setCreator("laporan excel");
- 		$object->getProperties()->setLastModifiedBy("Ebunga");
- 		$object->getProperties()->setTitle("Laporan data temp order");
-
-
- 		$object->setActiveSheetIndex(0);
-
- 		$object->getActiveSheet()->setCellValue('A1','No');
- 		$object->getActiveSheet()->setCellValue('B1','KODE TEMP');
- 		$object->getActiveSheet()->setCellValue('C1','CUSTOMER');
- 		$object->getActiveSheet()->setCellValue('D1','WAKTU');
- 		$object->getActiveSheet()->setCellValue('E1','KODE PRODUK');
- 		$object->getActiveSheet()->setCellValue('F1',' QT');
- 		$object->getActiveSheet()->setCellValue('G1','TOTAL');
-
- 		$baris = 2;
- 		$no = 1;
-
- 		foreach ($data['order'] as $order) {
- 			$object->getActiveSheet()->setCellValue('A'.$baris, $no++);
- 			$object->getActiveSheet()->setCellValue('B'.$baris, $order->kd_temp);
- 			$object->getActiveSheet()->setCellValue('C'.$baris, $order->kd_customer);
- 			$object->getActiveSheet()->setCellValue('D'.$baris, $order->waktu);
- 			$object->getActiveSheet()->setCellValue('E'.$baris, $order->kd_product);
- 			$object->getActiveSheet()->setCellValue('F'.$baris, $order->qt);
- 			$object->getActiveSheet()->setCellValue('G'.$baris, $order->total);
-
- 			$baris++;
  		}
 
- 		$filename = "Data_temp_order".'.xlsx';
- 		$object->getActiveSheet()->setTitle("Data Temp Order");
- 		header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
- 		header('Content-Disposition: attachment; filename="'.$filename.'"'); 
- 		header('Cache-Control: max-age=0');
-
- 		$write = PHPExcel_IOFactory::createWriter($object, 'Excel2007');
-   		 $write->save('php://output');
-
-   		 exit();
 
 
-
- 	}
+ 	
 
  	function hapus_temp_order(){
 		$id = $this->input->get('id');

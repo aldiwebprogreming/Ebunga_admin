@@ -41,13 +41,18 @@
 
 		function order(){
 
-			$data['order'] = $this->m_data->get_order();
-			$this->load->view('get_data/order',$data);
+				$tgl = date('Y-m-d');
+				$this->db->select('*');
+				$this->db->from('tbl_temp_order');
+				$this->db->like('waktu',$tgl);
+				$data['order'] = $this->db->get()->result_array();
+
+				$this->load->view('get_data/order',$data);
 		}
 
 		function jumlah_order(){
 
-			$data['jumlah'] = $this->m_data->get_data('tbl_temp_order');
+				$data['jumlah'] = $this->m_data->get_data('tbl_temp_order');
 
 				// $tgl1 = substr($tgl['waktu'], 0,10);
 
