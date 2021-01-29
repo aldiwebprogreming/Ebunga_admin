@@ -27,6 +27,12 @@
 
 			function tambah_markup(){
 
+				$cek = $this->db->get('tbl_setting_markup')->num_rows();
+				if ($cek >= 1) {
+					$this->session->set_flashdata('message','swal("Maaf!", "Anda tidak dapat menambahkan mark up", "info");');
+					redirect('markup/data_markup');
+				}
+
 
 					$data['title'] = "Tambah markup";
 					$data['sub_title'] = "Tambah Mark Up Ebunga";
@@ -44,7 +50,7 @@
 					$this->db->insert('tbl_setting_markup', $data);
 
 					 $this->session->set_flashdata('message', 'swal("Sukses!", "Data berhasil ditambah", "success");');
-					redirect('markup/tambah_markup');
+					redirect('markup/data_markup');
 
 				
 					}

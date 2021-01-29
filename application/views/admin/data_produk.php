@@ -65,7 +65,18 @@
                                                 <td><?= $data['kd_produk'] ?></td>
                                                 <td><?= $data['nama_produk'] ?></td>
                                                 <td><?= $data['harga'] ?></td>
-                                                <td></td>
+                                                <td>
+                                                    <?php 
+
+                                                    foreach ($markup as $data1) {
+                                                    
+                                                    }
+
+                                                        $nilai = ($data1['mark_up']/100)*$data['harga'];
+                                                        echo $data['harga']+$nilai;
+
+                                                     ?>
+                                                </td>
                                                 <td><?= $data['stok'] ?></td>
                                                 <td>
                                                    <span class="d-inline-block" data-toggle="tooltip" data-title="Hapus">

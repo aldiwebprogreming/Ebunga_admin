@@ -25,6 +25,8 @@
 			$data['sub_title'] = "Data produk";
 
 			$data['produk'] = $this->m_data->get_data($tabel='tbl_produk');
+			$data['markup'] = $this->m_data->get_data('tbl_setting_markup');
+			
 
 			$this->load->view('template2/header', $data);
 			$this->load->view('admin/data_produk', $data);
