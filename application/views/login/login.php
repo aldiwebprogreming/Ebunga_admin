@@ -41,7 +41,7 @@
                    
                   </div>
 
-                  <div class="input-group mb-4">
+                  <div class="input-group mb-1">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
                         <a href="#" id="pass"><i class="fas fa-eye"></i></a>
@@ -51,14 +51,14 @@
                     <input type="password" id="show" class="form-control"  placeholder="Masukan password" name="pass">
                   
                   </div>
-                    <small> <?php echo $this->session->flashdata('pesan1'); ?></small>
+                    <small> <?php echo $this->session->flashdata('pesan1'); ?>.</small>
 
                  
             
 
                 
 
-                  <div class="form-group">
+                  <div class="form-group mt-4">
                     <button type="submit" class="btn btn-primary btn-lg btn-block" tabindex="4" style="background-color: #9932CC">
                       Login
                     </button>
