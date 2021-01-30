@@ -23,6 +23,7 @@ header("Content-Disposition: attachment; filename=data member.xlsx");
          <th>NPWP</th>
          <th>Siup</th>
          <th>Status</th>
+         <th>Upline</th>
          <th>Suspend</th>
 	</tr>
 	<?php
@@ -44,6 +45,7 @@ header("Content-Disposition: attachment; filename=data member.xlsx");
 		<td><?= $data['npwp'] ?></td>
 		<td><?= $data['siup'] ?></td>
 		<td><?= $data['status'] ?></td>
+		<td><?= $data['upline'] ?></td>
 		<td><?= $data['suspend'] ?></td>
 	</tr>
 

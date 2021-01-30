@@ -46,7 +46,7 @@
 				$this->db->from('tbl_temp_order');
 				$this->db->like('waktu',$tgl);
 				$data['order'] = $this->db->get()->result_array();
-
+  
 				$this->load->view('get_data/order',$data);
 		}
 

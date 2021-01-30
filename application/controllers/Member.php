@@ -81,6 +81,7 @@
  			'npwp' =>$this->input->post('npwp'),
  			'siup' =>$this->input->post('siup'),
  			'status' =>1,
+ 			'upline' =>"-",
  			'suspend' =>$this->input->post('suspend')
 
 
@@ -117,9 +118,6 @@
 		$this->load->view('template2/header', $data);
 		$this->load->view('detail/detail_member', $data);
 		$this->load->view('template2/footer');
-
-
-
 
  }
 

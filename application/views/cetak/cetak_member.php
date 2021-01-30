@@ -62,6 +62,7 @@ table tr:nth-child(even) {
 			<th width="">NPWP</th>
 			<th width="">Siup</th>
 			<th width="">Status</th>
+			<th width="">Upline</th>
 			<th width="">Suspend</th>
 
 		
@@ -131,6 +132,7 @@ table tr:nth-child(even) {
 			<td><?= $data['npwp'] ?></td>
 			<td><?= $data['siup']?></td>
 			<td><?= $data['status']?></td>
+			<td><?= $data['upline'] ?></td>
 			<td><?= $data['suspend']?></td>
 			
 		</tr>

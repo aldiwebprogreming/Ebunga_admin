@@ -65,7 +65,7 @@
                                                 <td><?= $data['active'] ?></td>
                                                 <td>
                                                    <span class="d-inline-block" data-toggle="tooltip" data-title="Hapus">
-                                                    <a href="#" class="btn btn-danger" onclick="return confirm('Yakin Hapus?')"><i class="fas fa-trash"></i></a>
+                                                    <a href="<?= base_url() ?>/markup/Hapus?id=<?= $data['id'] ?>" class="btn btn-danger" onclick="return confirm('Yakin Hapus?')"><i class="fas fa-trash"></i></a>
                                                   </span>
                                                    <span class="d-inline-block" data-toggle="tooltip" data-title="Edit">
                                                     <a href="<?= base_url() ?>markup/edit?id=<?= $data['id'] ?>" class="btn btn-info"><i class="fas fa-pen"></i></a>
