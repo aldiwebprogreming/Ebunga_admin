@@ -18,11 +18,23 @@
                     <div class="card-body">
                       <form method="POST" action="">
                         <div class="col-md-8 col-lg-8">
+
                             <div class="mb-3">
                               <label for="" class="form-label">Mark Up</label>
                               <input type="number" class="form-control" name="mark_up"  placeholder="Masukan mark up" required="" maxlength="3">
                               <small>Masukan mark up tanpa tanda (%)</small>
                             </div>
+
+                             <div class="mb-3">
+                              <label for="" class="form-label">Type</label>
+                              <select class="form-control" name="type" id="type">
+                                <option>--Pilih type mark up--</option>
+                                <option>all</option>
+                                <option  id="kategroi">kategori</option>
+                              </select>
+                            </div>
+
+                            
 
 
                             <div class="mb-3">
@@ -42,3 +54,18 @@
            </section>
          </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  
+    $(document).ready(function(){
+
+          $('#type').change(function(){
+
+           var a = $(this).attr('id');
+           alert(a);
+          });
+
+        });
+
+</script>

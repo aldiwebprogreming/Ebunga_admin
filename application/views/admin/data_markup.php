@@ -65,7 +65,7 @@
                                                 <td><?= $data['active'] ?></td>
                                                 <td>
                                                    <span class="d-inline-block" data-toggle="tooltip" data-title="Hapus">
-                                                    <a href="#" id="<?= $data['id'] ?>" class="btn btn-danger hapus" onclick="hapus()"><i class="fas fa-trash"></i></a>
+                                                    <a href="<?= base_url() ?>markup/hapus?id=<?= $data['id'] ?>" class="btn btn-danger" onclick="return confirm('Yakin Hapus?')"><i class="fas fa-trash"></i></a>
                                                   </span>
                                                    <span class="d-inline-block" data-toggle="tooltip" data-title="Edit">
                                                     <a href="<?= base_url() ?>markup/edit?id=<?= $data['id'] ?>" class="btn btn-info"><i class="fas fa-pen"></i></a>
@@ -104,34 +104,8 @@
     $(document).ready(function(){
       $(".preloader").fadeOut('slow');
 
-      
        
     })
-
-
-    function hapus(){
-
-      $(".hapus").click(function(){
-        var a = $(this).attr('id');
-
-       
-      })
-      swal({
-  title: "Are you sure?",
-  text: "Once deleted, you will not be able to recover this imaginary file!",
-  icon: "warning",
-  buttons: true,
-  dangerMode: true,
-})
-.then((willDelete) => {
-  if (willDelete) {
-      load("<?= base_url() ?>markup/hapus?id="+a)
-  } else {
-    swal("Your imaginary file is safe!");
-  }
-});
-      
-    }
     </script>
 
    
