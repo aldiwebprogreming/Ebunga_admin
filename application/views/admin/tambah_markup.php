@@ -25,18 +25,18 @@
                               <small>Masukan mark up tanpa tanda (%)</small>
                             </div>
 
-                         <!--    <div class="mb-3">
+                           <!--  <div class="mb-3">
                               <label for="" class="form-label">Type</label>
                               <select class="form-control" name="type" id="type">
                                 <option>--Pilih type mark up--</option>
                                 <option>all</option>
-                                <option>kategori</option>
+                                <option  id="kategroi">kategori</option>
                               </select>
-                            </div> -->
+                            </div>
 
-                           <!--  <div class="mb-3" id="tampil" style="display: none">
+                            <div class="mb-3" id="tampil" style="display: none">
                               <label for="" class="form-label">Kategori Produk</label>
-                              <select class="form-control" name="kategori" >
+                              <select class="form-control" name="type" id="type">
                                 <option>--Pilih kategori--</option>
                                 <?php foreach ($kategori as $data) { ?>
                                   <option><?= $data['kd_kategori'] ?></option>
@@ -66,7 +66,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   
     $(document).ready(function(){
 
@@ -76,10 +76,10 @@
            if (a == 'kategori') {
               $("#tampil").show();
            }else{
-              $("#tampil").hide();
+              $("#tampil").hide()
            }
           });
 
         });
 
-</script>
+</script> -->

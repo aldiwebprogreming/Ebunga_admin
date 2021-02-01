@@ -27,7 +27,7 @@
                                 <div class="card-body">
                                 <?php 
 
-                                  if ($cek <= 1) { ?>
+                                  if ($cek >= 1) { ?>
                                     <a href="#" onclick=" swal('Maaf!', 'Mark up tidak dapat ditambah!', 'info')" class ="btn btn-primary mb-4" disabled > Tambah Mark Up</a>
                                   <?php } else { ?>
                                     <a href="<?= base_url() ?>markup/tambah_markup" class ="btn btn-primary mb-4" disabled > Tambah Mark Up</a>
@@ -41,9 +41,9 @@
                                             <tr>
                                                 <th>No</th>
                                                 <th>Mark Up</th>
-                                                <th>type</th>
-                                                <th>Kategori Product</th>
-                                                <th>Active</th>
+                                               <!--  <th>type</th> -->
+                                               <!--  <th>Kategori Product</th>
+                                                <th>Active</th> -->
                                                 <th>Opsi</th>
                                             </tr>
                                         </thead>
@@ -51,9 +51,9 @@
                                             <tr>
                                                 <th>No</th>
                                                 <th>Mark Up</th>
-                                                <th>type</th>
-                                                <th>Kategori Product</th>
-                                                <th>Active</th>
+                                             <!--    <th>type</th> -->
+                                               <!--  <th>Kategori Product</th>
+                                                <th>Active</th> -->
                                                 <th>Opsi</th>
                                             </tr>
                                         </tfoot>
@@ -66,9 +66,9 @@
                                              <tr>
                                                 <td><?= $no++; ?></td>
                                                 <td><?= $data['mark_up'] ?></td>
-                                                <td><?= $data['type'] ?></td>
-                                                <td><?= $data['kategori_product'] ?></td>
-                                                <td><?= $data['active'] ?></td>
+                                                <!-- <td><?= $data['type'] ?></td> -->
+                                              <!--   <td><?= $data['kategori_product'] ?></td>
+                                                <td><?= $data['active'] ?></td> -->
                                                 <td>
                                                    <span class="d-inline-block" data-toggle="tooltip" data-title="Hapus">
                                                     <a href="<?= base_url() ?>markup/hapus?id=<?= $data['id'] ?>" class="btn btn-danger" onclick="return confirm('Yakin Hapus?')"><i class="fas fa-trash"></i></a>

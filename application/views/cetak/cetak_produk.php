@@ -42,7 +42,7 @@ table tr:nth-child(even) {
 			<hr style="border: 3px solid;">
 		<br><br><br>
 
-	<p><strong> Dicetak Pada Tanggal : <?= date('m-d-Y'); ?></strong></p>
+	<!-- <p><strong> Dicetak Pada Tanggal : <?= date('m-d-Y'); ?></strong></p> -->
 		
 	<table border="1" >
 		<tr>
@@ -98,7 +98,7 @@ table tr:nth-child(even) {
 
 	<div class="" style="position: absolute; top :100%">
 		<hr class="" style="border: 1px solid; color: black;" > 
-		<small style="font-style: italic;">	<?= $footer; ?> : <?= date('m-d-Y'); ?> </small>
+		<small style="font-style: italic;">	<?= $footer; ?>  <?= date('m-d-Y'); ?> </small>
 
 	</div>
 

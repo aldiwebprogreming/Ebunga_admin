@@ -42,7 +42,7 @@ table tr:nth-child(even) {
 			<hr style="border: 3px solid;">
 		<br><br><br>
 
-	<p><strong> Dicetak Pada Tanggal : <?= date('m-d-Y'); ?></strong></p>
+	<!-- <p><strong> Dicetak Pada Tanggal : <?= date('m-d-Y'); ?></strong></p> -->
 		
 	<table border="1" style="font-size: 8px;">
 		<tr>

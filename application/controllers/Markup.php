@@ -30,11 +30,11 @@
 
 			function tambah_markup(){
 
-				// $cek = $this->db->get('tbl_setting_markup')->num_rows();
-				// if ($cek >= 1) {
-				// 	$this->session->set_flashdata('message','swal("Maaf!", "Anda tidak dapat menambahkan mark up", "info");');
-				// 	redirect('markup/data_markup');
-				// }
+				$cek = $this->db->get('tbl_setting_markup')->num_rows();
+				if ($cek >= 1) {
+					$this->session->set_flashdata('message','swal("Maaf!", "Anda tidak dapat menambahkan mark up", "info");');
+					redirect('markup/data_markup');
+				}
 
 
 					$data['title'] = "Tambah markup";
@@ -51,8 +51,8 @@
 							$data = [
 
 						'mark_up' => $this->input->post('mark_up'),
-						'type' => $this->input->post('type'),
-						'kategori_product' =>'-',
+						// 'type' => $this->input->post('type'),
+						// 'kategori_product' =>'-',
 						'active' => 1
 					];
 
@@ -66,8 +66,8 @@
 						 $data = [
 
 						'mark_up' => $this->input->post('mark_up'),
-						'type' => $this->input->post('type'),
-						'kategori_product' => $this->input->post('kategori'),
+						// 'type' => $this->input->post('type'),
+						// 'kategori_product' => $this->input->post('kategori'),
 						'active' => 1
 					];
 
@@ -78,7 +78,8 @@
 
 						}
 						
-				
+					
+
 				
 					}
 
@@ -96,7 +97,7 @@
 			function edit(){
 				$id = $this->input->get('id');
 				$data['title'] = "Edit markup";
-				$data['sub_title'] = "Edit Mark Up Ebunga";
+				$data['sub_title'] = "Edit Mark Up Ebunnga";
 
 				$data['markup'] = $this->m_data->get_det('tbl_setting_markup', $id);
 				$data['kategori'] = $this->m_data->get_data('tbl_kategori_produk');
@@ -110,8 +111,8 @@
 					$data = [
 
 						'mark_up' => $this->input->post('mark_up'),
-						'type' => $this->input->post('type'),
-						'kategori_product' => $this->input->post('kategori'),
+						// 'type' => $this->input->post('type'),
+						// 'kategori_product' => $this->input->post('kategori'),
 						'active' => $this->input->post('active')
 					];
 
