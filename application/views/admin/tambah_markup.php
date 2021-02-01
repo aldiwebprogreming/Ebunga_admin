@@ -25,16 +25,16 @@
                               <small>Masukan mark up tanpa tanda (%)</small>
                             </div>
 
-                            <div class="mb-3">
+                         <!--    <div class="mb-3">
                               <label for="" class="form-label">Type</label>
                               <select class="form-control" name="type" id="type">
                                 <option>--Pilih type mark up--</option>
                                 <option>all</option>
                                 <option>kategori</option>
                               </select>
-                            </div>
+                            </div> -->
 
-                            <div class="mb-3" id="tampil" style="display: none">
+                           <!--  <div class="mb-3" id="tampil" style="display: none">
                               <label for="" class="form-label">Kategori Produk</label>
                               <select class="form-control" name="kategori" >
                                 <option>--Pilih kategori--</option>
@@ -42,7 +42,7 @@
                                   <option><?= $data['kd_kategori'] ?></option>
                                 <?php } ?>
                               </select>
-                            </div>
+                            </div> -->
 
                             
 

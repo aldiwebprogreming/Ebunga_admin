@@ -78,8 +78,7 @@
 
 						}
 						
-					
-
+				
 				
 					}
 
@@ -97,7 +96,7 @@
 			function edit(){
 				$id = $this->input->get('id');
 				$data['title'] = "Edit markup";
-				$data['sub_title'] = "Edit Mark Up Ebunnga";
+				$data['sub_title'] = "Edit Mark Up Ebunga";
 
 				$data['markup'] = $this->m_data->get_det('tbl_setting_markup', $id);
 				$data['kategori'] = $this->m_data->get_data('tbl_kategori_produk');

@@ -29,40 +29,6 @@
                                <small>Masukan mark up tanpa tanda (%)</small>
                             </div>
 
-                            <div class="mb-3">
-                              <label for="" class="form-label">Type</label>
-                                <select class="form-control" name="type" id="type">
-                                  <?php if ($data['type'] == 'all'){ ?>
-                                  <option><?= $data['type'] ?></option>
-                                  <option>kategori</option>
-                                  <?php } ?>
-                                </select>
-                               
-                            </div>
-
-                             <div class="mb-3" id="kategori1">
-                              <label for="" class="form-label">Kategori</label>
-                                <select class="form-control" name="kategori">
-                                  <?php if ($data['type'] == 'all'){ ?>
-                                  <option><?= $data['kategori_product'] ?></option>
-                                  <?php } ?>
-                                </select>
-                              
-                            </div>
-
-                             <div class="mb-3" id="kate" style="display: none">
-                              <label for="" class="form-label">Kategori</label>
-                                <select class="form-control" name="kategori">
-                                <?php foreach ($kategori as $valu) {?>
-                                  <option><?= $valu['kd_kategori'] ?></option>
-                                <?php } ?>
-                                </select>
-                              
-                            </div>
-
-
-                            
-
                              <div class="mb-3">
                               <label for="" class="form-label">Active</label>
                               <select class="form-control" name="active"> 
@@ -70,20 +36,15 @@
                                 if ($data['active'] == 1) {
                                      echo "<option value='1'>Y</option>";
                                       echo "<option value='0'>N</option>";                                  
-                                } else {
+                                } else {  
 
-                                     echo "<option value='0'>N</option>";
+                                    echo "<option value='0'>N</option>";
                                     echo "<option value='1'>Y</option>";
 
                                 }
                               ?>
                               </select>
                             </div>
-
-
-
-
-
 
                             <div class="mb-3">
                                  <input type="submit" name="edit" class="btn btn-primary" value="Edit">
@@ -111,6 +72,12 @@
         if (a == 'kategori') {
           $("#kategori1").hide();
           $("#kate").show()
+          $("#kate2").hide();
+        } else{
+
+          $("#kate2").show();
+          $("#kate").hide();
+           $("#kategori1").hide();
         }
 
     })
