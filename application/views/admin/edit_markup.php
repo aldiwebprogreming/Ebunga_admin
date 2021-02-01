@@ -29,40 +29,26 @@
                                <small>Masukan mark up tanpa tanda (%)</small>
                             </div>
 
-                            <?php if ($data['type'] = 'kategori') { ?>
-
                             <div class="mb-3">
                               <label for="" class="form-label">Type</label>
-                                <select class="form-control" name="type" id="type">
-                                  <option style="color: blue; font-weight: bold;"><?= $data['type'] ?></option>
-                                  <option>all</option>
-                                </select>
-                            </div>
-
-                            <div class="mb-3">
-                              <label for="" class="form-label">Kategori</label>
-                                <select class="form-control" name="kategori" id="pilih">
-                                  <option style="color: blue; font-weight: bold;"><?= $data['kategori_product'] ?></option>
-                                  <?php foreach ($kategori as $val) { ?>
-                                    <option><?= $val['kd_kategori'] ?></option>
+                                <select class="form-control" name="type">
+                                  <?php if ($data['type'] == 'all'){ ?>
+                                  <option><?= $data['type'] ?></option>
+                                  <option>kategori</option>
                                   <?php } ?>
                                 </select>
+                               
                             </div>
 
-                          <?php } else { ?>
-
-                              <div class="mb-3">
-                              <label for="" class="form-label">Type</label>
-                                <select class="form-control" name="type" id="type">
-                                  <option style="color: blue; font-weight: bold;"><?= $data['type'] ?></option>
-                                  <option>kategori</option>
+                             <div class="mb-3">
+                              <label for="" class="form-label">Kategori</label>
+                                <select class="form-control" name="kategori">
+                                  <?php if ($data['type'] == 'all'){ ?>
+                                  <option><?= $data['kategori_product'] ?></option>
+                                  <?php } ?>
                                 </select>
+                              
                             </div>
-
-                          <?php } ?>
-
-
-
 
 
                              <div class="mb-3">
@@ -75,7 +61,7 @@
                                 } else {
 
                                      echo "<option value='0'>N</option>";
-                                      echo "<option value='1'>Y</option>";
+                                    echo "<option value='1'>Y</option>";
 
                                 }
                               ?>
