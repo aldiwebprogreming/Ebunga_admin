@@ -20,12 +20,15 @@
                                 
                     <div class="card-body">
                      <form method="POST" action="">
+
                         <div class="col-md-8 col-lg-8">
+                          
                             <div class="mb-3">
                               <label for="" class="form-label">Mark Up</label>
                               <input type="text" class="form-control" name="mark_up"  placeholder="Masukan mark up" required="" value="<?= $data['mark_up'] ?>">
                                <small>Masukan mark up tanpa tanda (%)</small>
                             </div>
+
 
 
                              <div class="mb-3">
