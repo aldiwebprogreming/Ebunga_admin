@@ -62,7 +62,7 @@
 					redirect('markup/data_markup');
 
 						} else{
-							
+
 						 $data = [
 
 						'mark_up' => $this->input->post('mark_up'),
@@ -100,6 +100,7 @@
 				$data['sub_title'] = "Edit Mark Up Ebunnga";
 
 				$data['markup'] = $this->m_data->get_det('tbl_setting_markup', $id);
+				$data['kategori'] = $this->m_data->get_data('tbl_kategori_produk');
 
 				$this->load->view('template2/header', $data);
 				$this->load->view('admin/edit_markup', $data);

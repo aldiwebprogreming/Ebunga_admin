@@ -22,12 +22,46 @@
                      <form method="POST" action="">
 
                         <div class="col-md-8 col-lg-8">
-                          
+
                             <div class="mb-3">
                               <label for="" class="form-label">Mark Up</label>
                               <input type="text" class="form-control" name="mark_up"  placeholder="Masukan mark up" required="" value="<?= $data['mark_up'] ?>">
                                <small>Masukan mark up tanpa tanda (%)</small>
                             </div>
+
+                            <?php if ($data['type'] = 'kategori') { ?>
+
+                            <div class="mb-3">
+                              <label for="" class="form-label">Type</label>
+                                <select class="form-control" name="type" id="type">
+                                  <option style="color: blue; font-weight: bold;"><?= $data['type'] ?></option>
+                                  <option>all</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                              <label for="" class="form-label">Kategori</label>
+                                <select class="form-control" name="kategori" id="pilih">
+                                  <option style="color: blue; font-weight: bold;"><?= $data['kategori_product'] ?></option>
+                                  <?php foreach ($kategori as $val) { ?>
+                                    <option><?= $val['kd_kategori'] ?></option>
+                                  <?php } ?>
+                                </select>
+                            </div>
+
+                          <?php } else { ?>
+
+                              <div class="mb-3">
+                              <label for="" class="form-label">Type</label>
+                                <select class="form-control" name="type" id="type">
+                                  <option style="color: blue; font-weight: bold;"><?= $data['type'] ?></option>
+                                  <option>kategori</option>
+                                </select>
+                            </div>
+
+                          <?php } ?>
+
+
 
 
 
