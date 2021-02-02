@@ -11,7 +11,7 @@
  <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1><?= $sub_title; ?></h1>
+            <h1><i class="fas fa-chart-line" style="font-size: 20px;"></i> <?= $sub_title; ?></h1>
           </div>
           
 
@@ -20,7 +20,7 @@
              <div class="col-12 col-md-12 col-lg-12">
                 <div class="card">
                   <div class="card-header">
-                    <h4><?= $sub_title ?></h4>
+                    <h4></i><?= $sub_title ?></h4>
                   </div>
     
                                 

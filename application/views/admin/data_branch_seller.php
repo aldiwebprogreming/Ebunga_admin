@@ -11,7 +11,7 @@
  <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1><?= $sub_title; ?></h1>
+            <h1><i class="fas fa-code-branch" style="font-size: 30px;"></i> <?= $sub_title; ?></h1>
           </div>
           
 
