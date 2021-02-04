@@ -11,7 +11,7 @@
  <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1><?= $sub_title; ?></h1>
+            <h1><li class="fas fa-check-circle" style="font-size: 20px;"></li> <?= $sub_title; ?></h1>
           </div>
           
 

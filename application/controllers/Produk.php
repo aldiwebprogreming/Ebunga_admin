@@ -236,7 +236,7 @@
 		$id = $this->input->get('id');
 		$tabel = "tbl_produk";
 		$data = [
-			'active' => 0
+			'active' => 1
 		];
 
 		$this->m_data->proses_edit($id,$tabel,$data);
@@ -252,7 +252,7 @@
 		$id = $this->input->get('id');
 		$tabel = "tbl_produk";
 		$data = [
-			'active' => 1
+			'active' => 0
 		];
 
 		$this->m_data->proses_edit($id,$tabel,$data);

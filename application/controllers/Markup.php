@@ -118,8 +118,7 @@
 
 
 					$update = $this->m_data->proses_edit($id,'tbl_setting_markup',$data);
-					$this->session->set_flashdata('message','swal("Suskses!", "Data berhasil diedit")');
-					redirect('markup/data_markup');
+					$this->session->set_flashdata('message', 'swal("Sukses!", "Markup berhasil diubah", "success")');redirect('produk/data_produk');
 				}
 
 			}
