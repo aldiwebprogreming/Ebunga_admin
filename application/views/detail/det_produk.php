@@ -53,11 +53,12 @@
 
                             <div class="mb-3">
                               <label for="" class="form-label"><strong>Kategori</strong></label>
-                              <select class="form-control" name="kategori">
-                                <option><?= $data['kategori'] ?></option>
-                              </select>
+                             
+                                <p><?= $data['kategori'] ?></p>
+                             
                             </div>
-
+                             <hr>
+                             
                              <div class="mb-3">
                               <label for="" class="form-label"> <strong>Sub Kategori</strong></label>
                               <p><?= $data['sub_kategori'] ?></p>

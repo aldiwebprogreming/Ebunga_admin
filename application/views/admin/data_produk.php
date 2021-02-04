@@ -40,6 +40,7 @@
                                                 <th>Harga Awal</th>
                                                 <th>Mark Up</th>
                                                 <th>Stok</th>
+                                                 <th>Status</th>
                                                 <th>Opsi</th>
                                             </tr>
                                         </thead>
@@ -51,6 +52,7 @@
                                                 <th>Harga Awal</th>
                                                 <th>Mark Up</th>
                                                 <th>Stok</th>
+                                                <th>Status</th>
                                                 <th>Opsi</th>
                                             </tr>
                                         </tfoot>
@@ -78,6 +80,9 @@
                                                      ?>
                                                 </td>
                                                 <td><?= $data['stok'] ?></td>
+                                                <td>
+                                                   <a id="status" href="<?= base_url() ?>Produk/status_produk?id=<?= $data['id'] ?>" class="badge rounded-pill btn btn-primary" onclick="return confirm('Apakah ingin mendisable branch seller ini ?')" id="statuss">active</a>
+                                                </td>
                                                 <td>
                                                    <span class="d-inline-block" data-toggle="tooltip" data-title="Hapus">
                                                     <a href="<?= base_url() ?>produk/hapus_produk?id=<?= $data['id'] ?>" class="btn btn-danger" onclick="return confirm('Yakin Hapus?')"><i class="fas fa-trash"></i></a>

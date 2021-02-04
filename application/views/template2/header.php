@@ -7,7 +7,9 @@
 
   <link rel="shortcut icon" href="<?= base_url() ?>logo/logo1.png" style="height: 30px;">
 
-
+ 
+ <script src="<?= base_url() ?>assets3/zoom/jquery.zoom.js"></script>
+ <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
 
 
 
