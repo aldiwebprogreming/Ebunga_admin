@@ -1,10 +1,10 @@
 <!-- loading -->
- <div class="preloader">
+ <!-- <div class="preloader">
       <div class="loading">
         <img src="<?= base_url() ?>loading/load1.gif" width="400">
         
       </div>
-    </div>
+    </div> -->
   <!-- loading -->
 
       <!-- Main Content -->
@@ -149,11 +149,6 @@
 
 
 
-
-
-
-
-
             </div>
            
          
@@ -172,13 +167,15 @@
 
 
 
-
   <script>
+
+
+
             var ctx = document.getElementById("myChart1");
             var myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                    labels: ["Aldi", "Bambang", "Purple", "Orange"],
                     datasets: [{
                             label: '# of Votes',
                             data: [12, 19, 3, 5, 2, 3],
@@ -296,9 +293,9 @@
           }
 
 
-      $(document).ready(function(){
-          $(".preloader").fadeOut('slow');
-        })
+      // $(document).ready(function(){
+      //     $(".preloader").fadeOut('slow');
+      //   })
 
 
         </script>
