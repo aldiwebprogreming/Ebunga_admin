@@ -81,7 +81,13 @@
                                                 </td>
                                                 <td><?= $data['stok'] ?></td>
                                                 <td>
-                                                   <a id="status" href="<?= base_url() ?>Produk/status_produk?id=<?= $data['id'] ?>" class="badge rounded-pill btn btn-primary" onclick="return confirm('Apakah ingin mendisable branch seller ini ?')" id="statuss">active</a>
+
+                                                  <?php if ($data['active'] == 1) { ?>
+                                                         <a id="status" href="<?= base_url() ?>Produk/disable?id=<?= $data['id'] ?>" class="badge rounded-pill btn btn-danger" onclick="return confirm('Apakah ingin mengaktifkan produk ini ?')" id="statuss">disable</a>  
+                                                  <?php }else { ?>
+                                                     <a id="status" href="<?= base_url() ?>Produk/active?id=<?= $data['id'] ?>" class="badge rounded-pill btn btn-primary" onclick="return confirm('Apakah ingin mendisable produk ini ?')" id="statuss">active</a> 
+                                                  <?php } ?>
+                                                  
                                                 </td>
                                                 <td>
                                                    <span class="d-inline-block" data-toggle="tooltip" data-title="Hapus">
@@ -133,3 +139,5 @@
       $(".preloader").fadeOut('slow');
     })
     </script>
+
+    <?php echo "<script>".$this->session->flashdata('message')."</script>"?>

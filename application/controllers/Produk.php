@@ -231,6 +231,36 @@
 		$this->load->view('excel/cetak_produk', $data);
 	}
 
+	function disable(){
+
+		$id = $this->input->get('id');
+		$tabel = "tbl_produk";
+		$data = [
+			'active' => 0
+		];
+
+		$this->m_data->proses_edit($id,$tabel,$data);
+
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Produk berhasil di aktifkan", "success")');
+		redirect('produk/data_produk');
+
+
+	}
+
+	function active(){
+
+		$id = $this->input->get('id');
+		$tabel = "tbl_produk";
+		$data = [
+			'active' => 1
+		];
+
+		$this->m_data->proses_edit($id,$tabel,$data);
+
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Produk berhasil disable", "success")');redirect('produk/data_produk');
+
+	}
+
 
 	
 
