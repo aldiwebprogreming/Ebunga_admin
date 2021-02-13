@@ -164,6 +164,8 @@
       </footer>
     </div>
   </div>
+  
+
 
 
 
@@ -217,7 +219,9 @@
             var myChart1 = new Chart(ctx, {
                 type: 'pie',
                 data: {
-                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                    labels: ["<?php foreach( $produk as $data) {
+                      echo $data['nama_produk'].",";
+                    } ?>"],
                     datasets: [{
                             label: '# of Votes',
                             data: [12, 19, 3, 5, 2, 3],

@@ -35,6 +35,8 @@
 			 $this->db->order_by('jml', 'desc'); 
 			 $data['best'] = $this->db->get('tbl_temp_order')->result_array();
 
+			 $data['produk'] = $this->db->get('tbl_produk')->result_array();
+
 			$this->load->view('template2/header', $data);
 			$this->load->view('admin/dashbord',$data);
 			$this->load->view('template2/footer');
