@@ -120,8 +120,16 @@
               <div class="col-12 col-md-6 col-lg-6">
                 <div class="card">
                   <div class="card-header">
-                    <h4>Grafis Penjualan/Bulan</h4>
+                    <h4>Chart User</h4>
                   </div>
+                    <div class="form-groub">
+                      <select class="form-control">
+                        <?php $tahun = date(Y) ?>
+                        <?php for ($i=2000; $i >= 2021  ; $i++) { 
+                            echo "<option>$i</option>";
+                        } ?>
+                      </select>
+                    </div>
                        <div class="card-body">
                               
 
@@ -177,17 +185,23 @@
             var myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ["Aldi", "Bambang", "Purple", "Orange"],
+                    labels: ["Jan", "Feb", "Mar", "Apr","Mei", "Jun", "jul","Ags", "Sep","Okt","Nov", "Des"],
                     datasets: [{
                             label: '# of Votes',
-                            data: [12, 19, 3, 5, 2, 3],
+                            data: [50, 19, 3, 5, 2, 3,12, 19, 3, 5, 2, 3],
                             backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)'
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 99, 132, 0.2)'
+                               
                             ],
                             borderColor: [
                                 'rgba(255,99,132,1)',
@@ -219,12 +233,14 @@
             var myChart1 = new Chart(ctx, {
                 type: 'pie',
                 data: {
-                    labels: ["<?php foreach( $produk as $data) {
-                      echo $data['nama_produk'].",";
-                    } ?>"],
+                    labels: [<?php foreach( $best as $data) {
+                      echo "'".$data['kd_product']."'".",";
+                    } ?>],
                     datasets: [{
                             label: '# of Votes',
-                            data: [12, 19, 3, 5, 2, 3],
+                            data: [<?php foreach ($best as $data) {
+                              echo $data['jml'].",";
+                            }  ?>],
                             backgroundColor: [
                                 'rgb(50, 205, 50)',
                                 'rgb(123, 103, 238)',
