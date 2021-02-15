@@ -122,14 +122,39 @@
                   <div class="card-header">
                     <h4>Chart User</h4>
                   </div>
-                    <div class="form-groub">
-                      <select class="form-control">
-                        <?php $tahun = date(Y) ?>
-                        <?php for ($i=2000; $i >= 2021  ; $i++) { 
-                            echo "<option>$i</option>";
-                        } ?>
-                      </select>
-                    </div>
+                    
+                       <?php foreach ($regis as $data) {
+                         $sub = substr($data['waktu_registrasi'], 5,2);
+                         if ($sub == '01') {
+                           echo "Jan";
+                         } elseif ($sub == '02') {
+                           echo "Feb";
+                         }elseif ($sub == '03') {
+                           echo "Mar";
+                         }elseif ($sub == '04') {
+                           echo "Apr";
+                         }elseif ($sub == '05') {
+                           echo "Mei";
+                         }elseif ($sub == '06') {
+                           echo "Jun";
+                         }elseif ($sub == '07') {
+                           echo "Jul";
+                         }elseif ($sub == '08') {
+                           echo "Ags";
+                         }elseif ($sub == '09') {
+                           echo "Sept";
+                         }elseif ($sub == '10') {
+                           echo "Okt";
+                         }elseif ($sub == '11') {
+                           echo "Nov";
+                         }elseif ($sub == '12') {
+                           echo "Des";
+                         } else{
+                          echo "gagal";
+                         }
+
+                       } ?>
+                      
                        <div class="card-body">
                               
 

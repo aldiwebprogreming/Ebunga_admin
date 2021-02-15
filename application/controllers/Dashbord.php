@@ -36,6 +36,9 @@
 			 $data['best'] = $this->db->get('tbl_temp_order',6)->result_array();
 
 			 $data['produk'] = $this->db->get('tbl_produk')->result_array();
+			 
+			 $this->db->like('waktu_registrasi', '01');
+			 $data['regis'] = $this->db->get('tbl_registrasi_user')->result_array();
 
 			$this->load->view('template2/header', $data);
 			$this->load->view('admin/dashbord',$data);
