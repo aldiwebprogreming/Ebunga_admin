@@ -37,8 +37,12 @@
 
 			 $data['produk'] = $this->db->get('tbl_produk')->result_array();
 			 
-			 $this->db->like('waktu_registrasi', '01');
-			 $data['regis'] = $this->db->get('tbl_registrasi_user')->result_array();
+			 $id="2021";
+			 $this->db->like('waktu_registrasi',"$id"."-01");
+			 $data['jan'] = $this->db->get('tbl_registrasi_user')->num_rows();
+
+			 $this->db->like('waktu_registrasi',"$id"."-02");
+			 $data['feb'] = $this->db->get('tbl_registrasi_user')->num_rows();
 
 			$this->load->view('template2/header', $data);
 			$this->load->view('admin/dashbord',$data);
@@ -46,6 +50,16 @@
 
 		}
 
+
+		function chart_user(){
+
+			$id = $this->input->get('id');
+
+			 $this->db->like('waktu_registrasi',"$id"."-01");
+			 $data['jan'] = $this->db->get('tbl_registrasi_user')->num_rows();
+
+			 $this->load->view('admin/chart_user', $data);
+		}
 		
 
 

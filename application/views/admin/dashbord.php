@@ -120,10 +120,17 @@
               <div class="col-12 col-md-6 col-lg-6">
                 <div class="card">
                   <div class="card-header">
-                    <h4>Chart User</h4>
+                    <h4>Chart Registrasi User</h4>
                   </div>
+                  <div class="ml-4">
+                  <select name="tahun" id="tahun">
+                    <option>2020</option>
+                    <option>2021</option>
+                  </select>
+                  </div>
+                 
                     
-                       <?php foreach ($regis as $data) {
+                       <!-- <?php foreach ($regis as $data) {
                          $sub = substr($data['waktu_registrasi'], 5,2);
                          if ($sub == '01') {
                            echo "Jan";
@@ -153,7 +160,7 @@
                           echo "gagal";
                          }
 
-                       } ?>
+                       } ?> -->
                       
                        <div class="card-body">
                               
@@ -201,10 +208,8 @@
 
 
 
-
+<div class="chart" id="chart_user">
   <script>
-
-
 
             var ctx = document.getElementById("myChart1");
             var myChart = new Chart(ctx, {
@@ -213,7 +218,7 @@
                     labels: ["Jan", "Feb", "Mar", "Apr","Mei", "Jun", "jul","Ags", "Sep","Okt","Nov", "Des"],
                     datasets: [{
                             label: '# of Votes',
-                            data: [50, 19, 3, 5, 2, 3,12, 19, 3, 5, 2, 3],
+                            data: [<?php echo $jan; ?>,<?= $feb ?>, 3, 5, 2, 3,12, 19, 3, 5, 2, 3],
                             backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)',
                                 'rgba(255, 99, 132, 0.2)',
@@ -250,10 +255,14 @@
                 }
             });
 
+</script>
+
+</div>
+
         // <!-- grafic produk terlaris -->
 
 
-
+          <script>
            var ctx = document.getElementById("myChart12");
             var myChart1 = new Chart(ctx, {
                 type: 'pie',
@@ -296,7 +305,9 @@
                 }
             });
 
+          </script>
 
+          <script>
 
           // get data ajax
 
@@ -345,4 +356,6 @@
 
         </script>
 
+
+        <script type="text/javascript" src="<?= base_url() ?>assets3/js/chart.js"></script>
   
